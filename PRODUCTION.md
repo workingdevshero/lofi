@@ -49,6 +49,8 @@ Always `-map 0:v:0 -map 1:a:0`. Imagine loops often carry their own AAC; without
 
 If the approved loop is 16:9, crop it to 9:16 **only when both characters still fit**. Crop x is per-scene (track 1 used `x=520`). If they don't fit, generate a **native 9:16** still + loop instead of a skinny crop.
 
+**9:16 cast:** keep both people if they fit cleanly. If the tall frame can only hold one, **Dimitris** — not Hero.
+
 ### Automate It
 
 - Workspace: **Working Dev's Hero LLC** (`working-devs-hero`).
