@@ -66,7 +66,7 @@ If the approved loop is 16:9, crop it to 9:16 **only when both characters still 
 | 1 | Cape On, IDE Open | yes | yes | yes | [0t7yv7dCNvQ](https://www.youtube.com/watch?v=0t7yv7dCNvQ) |
 | 2 | Coffee Before the Commit | yes | yes | yes | [Y6q9N-kHysE](https://www.youtube.com/watch?v=Y6q9N-kHysE) |
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
-| 4 | City Lights Boot Sequence | yes | yes (new interior) | **missing** | 16:9 was submitted to review by mistake — do not publish it as a standalone. Need a 9:16 Short. |
+| 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | 16:9 is in Automate It review — do not publish it as a standalone. Short file is on disk, not submitted yet. |
 | 5 | Midnight Rooftop Flow | yes | old rooftop loop | old rooftop loop | no |
 | 6–20 | (see index.html) | yes | no | no | no |
 

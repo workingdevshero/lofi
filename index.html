@@ -20,7 +20,8 @@
     .card { background:var(--plum-2); border-radius:14px; overflow:hidden; border:1px solid #5a3a78; }
     .card img { width:100%; display:block; background:#1a0f26; }
     .scenes .card img { aspect-ratio:16/9; object-fit:cover; }
-    .scenes .card.portrait img { aspect-ratio:9/16; object-fit:cover; max-height:420px; width:auto; margin:0 auto; }
+    .scenes .card.portrait img,
+    .scenes .card.portrait video { aspect-ratio:9/16; object-fit:cover; max-height:520px; width:auto; margin:0 auto; }
     figcaption { padding:.7rem .85rem .9rem; font-size:.85rem; }
     .who { font-weight:700; }
     .meta { color:var(--muted); font-size:.78rem; margin-top:.2rem; }
@@ -77,8 +78,16 @@
     <figure class="card">
       <video autoplay loop muted playsinline src="videos/loops/04-city-lights-loop.mp4?v=1" style="width:100%;display:block;"></video>
       <figcaption>
-        <div class="who">4. City Lights Boot Sequence · 2:16</div>
-        <div class="meta">Hero + Dimitris · both typing, looking at screens · 6.0s try</div>
+        <div class="who">4. City Lights Boot Sequence · 2:16 · 16:9</div>
+        <div class="meta">Hero + Dimitris · both typing, looking at screens · 6.0s</div>
+        <audio controls src="audio/04-city-lights-boot-sequence.mp3"></audio>
+      </figcaption>
+    </figure>
+    <figure class="card portrait">
+      <video autoplay loop muted playsinline src="videos/loops/04-city-lights-loop-9x16.mp4?v=1" style="width:100%;display:block;"></video>
+      <figcaption>
+        <div class="who">4. City Lights Boot Sequence · 9:16 Short</div>
+        <div class="meta">Native 9:16 · 1080×1920 master · 136s</div>
         <audio controls src="audio/04-city-lights-boot-sequence.mp3"></audio>
       </figcaption>
     </figure>
