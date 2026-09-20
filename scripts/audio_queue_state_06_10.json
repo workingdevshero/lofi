@@ -1,0 +1,54 @@
+{
+  "tracks": {
+    "06": {
+      "id": "06",
+      "title": "The Secret Lair Terminal",
+      "slug": "the-secret-lair-terminal",
+      "queue_id": "01a0aa67-98e6-7c91-b41f-6e0ee17b01fd",
+      "duration_seconds": 154,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/06-the-secret-lair-terminal.mp3",
+      "bytes": 2465168
+    },
+    "07": {
+      "id": "07",
+      "title": "Rubber Duck on the Ledge",
+      "slug": "rubber-duck-on-the-ledge",
+      "queue_id": "01a0aa67-9ac2-7a11-b31a-915f344ac773",
+      "duration_seconds": 108,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge.mp3",
+      "bytes": 1729142
+    },
+    "08": {
+      "id": "08",
+      "title": "Rainy Fire Escape Deploy",
+      "slug": "rainy-fire-escape-deploy",
+      "queue_id": "01a0aa67-9cbf-7862-8f62-1c9b12812984",
+      "duration_seconds": 172,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/08-rainy-fire-escape-deploy.mp3",
+      "bytes": 2752724
+    },
+    "09": {
+      "id": "09",
+      "title": "Keyboard Cathedral",
+      "slug": "keyboard-cathedral",
+      "queue_id": "01a0aa67-9ef7-7931-ab3b-ed8f9667c30e",
+      "duration_seconds": 140,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/09-keyboard-cathedral.mp3",
+      "bytes": 2240724
+    },
+    "10": {
+      "id": "10",
+      "title": "Merge Conflict Moonlight",
+      "slug": "merge-conflict-moonlight",
+      "queue_id": "01a0aa67-a0ed-7582-8650-bd19f0f893a0",
+      "duration_seconds": 164,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/10-merge-conflict-moonlight.mp3",
+      "bytes": 2625664
+    }
+  }
+}

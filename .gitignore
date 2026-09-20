@@ -1,0 +1,9 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Imagine / ffmpeg scratch — not deliverables
+characters/work/
+videos/loops/work-04/
+**/*.jpg.lock
+**/*.json.lock

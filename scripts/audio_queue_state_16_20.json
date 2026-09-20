@@ -1,0 +1,54 @@
+{
+  "tracks": {
+    "16": {
+      "id": "16",
+      "title": "Side Quest After Hours",
+      "slug": "side-quest-after-hours",
+      "queue_id": "01a0bc58-98bc-78b2-a4f1-37d9e79079c4",
+      "duration_seconds": 116,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/16-side-quest-after-hours.mp3",
+      "bytes": 1857455
+    },
+    "17": {
+      "id": "17",
+      "title": "Documentation Rain",
+      "slug": "documentation-rain",
+      "queue_id": "01a0bc58-99b4-7ed0-89a9-346db5f57da6",
+      "duration_seconds": 170,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/17-documentation-rain.mp3",
+      "bytes": 2720959
+    },
+    "18": {
+      "id": "18",
+      "title": "The Last TODO",
+      "slug": "the-last-todo",
+      "queue_id": "01a0bc58-9ad7-7c30-b732-5cd62684bcb4",
+      "duration_seconds": 104,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/18-the-last-todo.mp3",
+      "bytes": 1665194
+    },
+    "19": {
+      "id": "19",
+      "title": "Green Build Glow",
+      "slug": "green-build-glow",
+      "queue_id": "01a0bc58-9b73-7873-95ac-f3d3ad545686",
+      "duration_seconds": 152,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/19-green-build-glow.mp3",
+      "bytes": 2433403
+    },
+    "20": {
+      "id": "20",
+      "title": "Dawn Over the Skyline",
+      "slug": "dawn-over-the-skyline",
+      "queue_id": "01a0bc58-9c6f-79b3-b1e0-2dfcc8896b8c",
+      "duration_seconds": 174,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/20-dawn-over-the-skyline.mp3",
+      "bytes": 2785742
+    }
+  }
+}

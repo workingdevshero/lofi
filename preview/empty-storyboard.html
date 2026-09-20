@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heroic LoFi — review</title>
+  <style>
+    :root {
+      --plum: #2d1941;
+      --plum-2: #3d2456;
+      --gold: #e6c35c;
+      --cream: #f5f0e8;
+      --muted: #cbb8d9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      background: var(--plum);
+      color: var(--cream);
+      line-height: 1.45;
+    }
+    header {
+      padding: 2.5rem 1.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.8rem; margin: 0 0 0.4rem; }
+    .sub { color: var(--muted); max-width: 46rem; }
+    h2 {
+      max-width: 1100px;
+      margin: 2rem auto 0.75rem;
+      padding: 0 1.5rem;
+      font-size: 1.15rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem;
+    }
+    .card {
+      background: var(--plum-2);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #5a3a78;
+    }
+    .card img { width: 100%; display: block; background: #1a0f26; }
+    .card figcaption {
+      padding: 0.7rem 0.85rem 0.9rem;
+      font-size: 0.85rem;
+    }
+    .card .who { font-weight: 700; }
+    .card .meta { color: var(--muted); font-size: 0.78rem; margin-top: 0.2rem; }
+    .scenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.1rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+    .scenes .card img { aspect-ratio: 16/9; object-fit: cover; }
+    .scenes .card.portrait img { aspect-ratio: 9/16; object-fit: cover; max-height: 420px; margin: 0 auto; width: auto; }
+    .note {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    a { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heroic LoFi for Vibe Coding</h1>
+    <p class="sub">
+      Character boards first, empty scene plates second. Nobody is composited in yet —
+      approve the cast and the rooms, then we drop people in.
+    </p>
+  </header>
+
+  <h2>Cast</h2>
+  <p class="note">Same flat sticker language. Neo is the stoic one (straight mouth, crossed arms). Moses is out.</p>
+  <div class="row">
+    <figure class="card">
+      <img src="characters/hero.jpg" alt="Hero" />
+      <figcaption>
+        <div class="who">Hero</div>
+        <div class="meta">Lead. Plum suit, gold &lt;/&gt;, magenta cape.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="characters/claudius.jpg" alt="Claudius" />
+      <figcaption>
+        <div class="who">Claudius</div>
+        <div class="meta">OpenClaw lobster. Tiny cape, gold belt, lightbulb.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="characters/claudia.jpg" alt="Claudia" />
+      <figcaption>
+        <div class="who">Claudia</div>
+        <div class="meta">Same lobster, pink bows, eyelashes, tiny cape.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="characters/dimitris.jpg" alt="Dimitris" />
+      <figcaption>
+        <div class="who">Dimitris</div>
+        <div class="meta">Hero in training. Same plum ground as Hero, &lt;/&gt; chest, green-lined cape.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="characters/neo.jpg" alt="Neo" />
+      <figcaption>
+        <div class="who">Neo</div>
+        <div class="meta">Cartoon proportions, stoic mouth, shades, gold pin.</div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <h2>Empty scenes</h2>
+  <p class="note">
+    Empty rooms, no characters. Track 5 is the canonical midnight roof. 4, 7, 9, 11, 16, 18, and 19 each got their own location.
+  </p>
+  <div class="scenes">
+    <figure class="card">
+      <img src="scenes/01-cape-on-dusk.jpg" alt="Track 1 dusk rooftop" />
+      <figcaption>
+        <div class="who">1. Cape On, IDE Open · 1:52</div>
+        <div class="meta">Cast: Hero + Dimitris</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/02-coffee.jpg" alt="Track 2 coffee" />
+      <figcaption>
+        <div class="who">2. Coffee Before the Commit · 2:28</div>
+        <div class="meta">No cast. Gold laptop with WDH &lt;/&gt; on the lid, steaming mug.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/03-golden-hour.jpg" alt="Track 3 golden hour" />
+      <figcaption>
+        <div class="who">3. Golden Hour Refactor · 2:48</div>
+        <div class="meta">Cast: Hero + Claudia</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/04-city-lights.jpg" alt="Track 4 city lights" />
+      <figcaption>
+        <div class="who">4. City Lights Boot Sequence · 2:16</div>
+        <div class="meta">Cast: Hero + Neo on the right parapet. Same plum world as 5, but a dense wall of windows.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/05-midnight-16x9.jpg" alt="Track 5 midnight 16:9" />
+      <figcaption>
+        <div class="who">5. Midnight Rooftop Flow · 2:56 · 16:9</div>
+        <div class="meta">Cast: Hero + tiny Claudius. Album cover plate (hero removed from site art).</div>
+      </figcaption>
+    </figure>
+    <figure class="card portrait">
+      <img src="scenes/05-midnight-9x16.jpg" alt="Track 5 midnight 9:16" />
+      <figcaption>
+        <div class="who">5. Midnight Rooftop Flow · 9:16 Shorts</div>
+        <div class="meta">Same empty plate, vertical. Dual-format proof.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/06-lair.jpg" alt="Track 6 lair" />
+      <figcaption>
+        <div class="who">6. The Secret Lair Terminal · 2:34</div>
+        <div class="meta">Cast: Hero + Claudius</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/07-ledge.jpg" alt="Track 7 ledge" />
+      <figcaption>
+        <div class="who">7. Rubber Duck on the Ledge · 1:48</div>
+        <div class="meta">Cast: Hero + Claudius sit on the parapet corner. Water tower in the background, lots of floor.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/08-rain-fire-escape.jpg" alt="Track 8 rain" />
+      <figcaption>
+        <div class="who">8. Rainy Fire Escape Deploy · 2:52</div>
+        <div class="meta">Cast: Hero + Claudia</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/09-keyboard.jpg" alt="Track 9 keyboard" />
+      <figcaption>
+        <div class="who">9. Keyboard Cathedral · 2:20</div>
+        <div class="meta">Cast: Hero in the chair, Claudia on the sill. Clock-tower loft, arched window.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/10-merge.jpg" alt="Track 10 merge" />
+      <figcaption>
+        <div class="who">10. Merge Conflict Moonlight · 2:44</div>
+        <div class="meta">No cast. Split-glow laptop on the empty parapet.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/11-waiting.jpg" alt="Track 11 waiting" />
+      <figcaption>
+        <div class="who">11. Waiting on CI · 1:38</div>
+        <div class="meta">Cast: Hero leans on the catwalk rail, Claudius napping. Laptop ignored on the grate.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/12-alley.jpg" alt="Track 12 alley" />
+      <figcaption>
+        <div class="who">12. Stack Trace Serenade · 2:38</div>
+        <div class="meta">Cast: Hero + Claudia</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/13-street.jpg" alt="Track 13 street" />
+      <figcaption>
+        <div class="who">13. Hotfix Under Streetlights · 1:58</div>
+        <div class="meta">Cast: Neo + Hero</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/14-on-call.jpg" alt="Track 14 on-call" />
+      <figcaption>
+        <div class="who">14. On-Call Ambient · 2:58</div>
+        <div class="meta">Cast: Neo solo</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/15-fog.jpg" alt="Track 15 fog" />
+      <figcaption>
+        <div class="who">15. Cache Warming · 2:24</div>
+        <div class="meta">Cast: Hero + Claudia</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/16-side-quest.jpg" alt="Track 16 side quest" />
+      <figcaption>
+        <div class="who">16. Side Quest After Hours · 1:56</div>
+        <div class="meta">Cast: Neo + Claudius on the catwalk floor. Gold laptop with WDH &lt;/&gt; on the lid.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/17-docs-rain.jpg" alt="Track 17 docs" />
+      <figcaption>
+        <div class="who">17. Documentation Rain · 2:50</div>
+        <div class="meta">Cast: Claudia at the small desk, Hero standing beside. Wide roof under the glass canopy.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/18-last-todo.jpg" alt="Track 18 last todo" />
+      <figcaption>
+        <div class="who">18. The Last TODO · 1:44</div>
+        <div class="meta">Hatch in the roof, stairs going down into the building. Laptop beside the opening.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/19-green-glow.jpg" alt="Track 19 green glow" />
+      <figcaption>
+        <div class="who">19. Green Build Glow · 2:32</div>
+        <div class="meta">No cast. Workshop already works as a still — green-gold monitors and empty chair.</div>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/20-dawn.jpg" alt="Track 20 dawn" />
+      <figcaption>
+        <div class="who">20. Dawn Over the Skyline · 2:54</div>
+        <div class="meta">Same simple roof language as 5, dawn sky. Closed gold laptop with WDH &lt;/&gt; on the lid.</div>
+      </figcaption>
+    </figure>
+  </div>
+</body>
+</html>

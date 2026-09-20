@@ -1,0 +1,49 @@
+{
+  "tracks": {
+    "01": {
+      "title": "Cape On, IDE Open",
+      "slug": "cape-on-ide-open",
+      "queue_id": "01a0a0db-ff12-7353-a04f-ce1b9338ef82",
+      "duration_seconds": 112,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/01-cape-on-ide-open.mp3",
+      "bytes": 1792254
+    },
+    "02": {
+      "title": "Coffee Before the Commit",
+      "slug": "coffee-before-the-commit",
+      "queue_id": "01a0a0de-e338-7f43-a58d-e7e12f23d779",
+      "duration_seconds": 148,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/02-coffee-before-the-commit.mp3",
+      "bytes": 2368619
+    },
+    "03": {
+      "title": "Golden Hour Refactor",
+      "slug": "golden-hour-refactor",
+      "queue_id": "01a0a0dc-033c-7cf2-a789-14b9f3842429",
+      "duration_seconds": 168,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/03-golden-hour-refactor.mp3",
+      "bytes": 2688776
+    },
+    "04": {
+      "title": "City Lights Boot Sequence",
+      "slug": "city-lights-boot-sequence",
+      "queue_id": "01a0a0dc-05e2-7873-bb4c-9bc5fd802751",
+      "duration_seconds": 136,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/04-city-lights-boot-sequence.mp3",
+      "bytes": 2176358
+    },
+    "05": {
+      "title": "Midnight Rooftop Flow",
+      "slug": "midnight-rooftop-flow",
+      "queue_id": "01a0a0de-e5e0-7891-90ea-b86ba9eca87e",
+      "duration_seconds": 176,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/05-midnight-rooftop-flow.mp3",
+      "bytes": 2817507
+    }
+  }
+}

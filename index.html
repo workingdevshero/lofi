@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heroic LoFi — working copy</title>
+  <style>
+    :root { --plum:#2d1941; --plum-2:#3d2456; --gold:#e6c35c; --cream:#f5f0e8; --muted:#cbb8d9; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:var(--plum); color:var(--cream); line-height:1.45; }
+    header { padding:2.5rem 1.5rem 1.25rem; max-width:1100px; margin:0 auto; }
+    h1 { font-size:1.8rem; margin:0 0 .4rem; }
+    .sub { color:var(--muted); max-width:48rem; }
+    h2 { max-width:1100px; margin:2rem auto .75rem; padding:0 1.5rem; font-size:1.15rem; color:var(--gold); letter-spacing:.04em; text-transform:uppercase; }
+    .note { max-width:1100px; margin:0 auto 1.5rem; padding:0 1.5rem; color:var(--muted); font-size:.92rem; }
+    .row, .scenes { display:grid; gap:1rem; max-width:1100px; margin:0 auto 2rem; padding:0 1.5rem; }
+    .row { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .scenes { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .scenes .card.full { grid-column: 1 / -1; }
+    .card { background:var(--plum-2); border-radius:14px; overflow:hidden; border:1px solid #5a3a78; }
+    .card img { width:100%; display:block; background:#1a0f26; }
+    .scenes .card img { aspect-ratio:16/9; object-fit:cover; }
+    .scenes .card.portrait img { aspect-ratio:9/16; object-fit:cover; max-height:420px; width:auto; margin:0 auto; }
+    figcaption { padding:.7rem .85rem .9rem; font-size:.85rem; }
+    .who { font-weight:700; }
+    .meta { color:var(--muted); font-size:.78rem; margin-top:.2rem; }
+    audio { width:100%; margin-top:.5rem; }
+    a { color:var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heroic LoFi for Vibe Coding</h1>
+    <p class="sub">Canonical working copy on the Desktop. Empty plates are frozen under <code>scenes/empty/</code>. Audio masters for all 20 tracks are in <code>audio/</code>. Production rules: <a href="PRODUCTION.md">PRODUCTION.md</a>.</p>
+  </header>
+
+  <h2>Formats</h2>
+  <p class="note"><strong>9:16 Shorts now</strong> (1080×1920) → Automate It → YouTube Shorts, one track at a time. <strong>16:9 plates later</strong> (1280×720) stay on disk and stitch into one long-form mix. Same audio under both. Do not publish a 16:9 file as its own YouTube video.</p>
+
+  <h2>Cast</h2>
+  <p class="note">Hero / Dimitris / Neo are the scene-style boards (sticker versions are in <code>characters/archive-sticker-boards/</code>). Claudia and Claudius are still the old stickers.</p>
+  <div class="row">
+    <figure class="card"><img src="characters/hero.jpg?v=3" alt="Hero" /><figcaption><div class="who">Hero</div><div class="meta">Original WDH cutout · no moon</div></figcaption></figure>
+    <figure class="card"><img src="characters/claudius.jpg" alt="Claudius" /><figcaption><div class="who">Claudius</div></figcaption></figure>
+    <figure class="card"><img src="characters/claudia.jpg" alt="Claudia" /><figcaption><div class="who">Claudia</div></figcaption></figure>
+    <figure class="card"><img src="characters/dimitris.jpg?v=8" alt="Dimitris" /><figcaption><div class="who">Dimitris</div><div class="meta">Younger sidekick · green suit · no mask · green boots</div></figcaption></figure>
+    <figure class="card"><img src="characters/neo.jpg?v=2" alt="Neo" /><figcaption><div class="who">Neo</div><div class="meta">Scene-style board</div></figcaption></figure>
+  </div>
+
+  <h2>Tracks 1–5 · audio + stills</h2>
+  <p class="note">Masters are 128 kbps MP3, durations match the slate (112 / 148 / 168 / 136 / 176s). No vocals. Scene 1 loop target is 3–6s.</p>
+  <div class="scenes">
+    <figure class="card full">
+      <video autoplay loop muted playsinline src="videos/loops/01-cape-on-dusk-loop.mp4?v=11" style="width:100%;display:block;"></video>
+      <figcaption>
+        <div class="who">1. Cape On, IDE Open · 1:52</div>
+        <div class="meta">Hero + Dimitris · locked · frozen cape · 3.0s</div>
+        <audio controls src="audio/01-cape-on-ide-open.mp3"></audio>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <video autoplay loop muted playsinline src="videos/loops/02-coffee-loop.mp4?v=1" style="width:100%;display:block;"></video>
+      <figcaption>
+        <div class="who">2. Coffee Before the Commit · 2:28</div>
+        <div class="meta">No cast · 3.0s steam loop</div>
+        <audio controls src="audio/02-coffee-before-the-commit.mp3"></audio>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <video autoplay loop muted playsinline src="videos/loops/03-golden-hour-loop.mp4?v=1" style="width:100%;display:block;"></video>
+      <figcaption>
+        <div class="who">3. Golden Hour Refactor · 2:48</div>
+        <div class="meta">Hero · sitting, back to camera · 3.4s typing loop</div>
+        <audio controls src="audio/03-golden-hour-refactor.mp3"></audio>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <video autoplay loop muted playsinline src="videos/loops/04-city-lights-loop.mp4?v=1" style="width:100%;display:block;"></video>
+      <figcaption>
+        <div class="who">4. City Lights Boot Sequence · 2:16</div>
+        <div class="meta">Hero + Dimitris · both typing, looking at screens · 6.0s try</div>
+        <audio controls src="audio/04-city-lights-boot-sequence.mp3"></audio>
+      </figcaption>
+    </figure>
+    <figure class="card">
+      <img src="scenes/dressed/05-midnight-16x9.jpg" alt="Track 5" />
+      <figcaption>
+        <div class="who">5. Midnight Rooftop Flow · 2:56</div>
+        <div class="meta">Hero + Claudius easter egg · 75 BPM A minor</div>
+        <audio controls src="audio/05-midnight-rooftop-flow.mp3"></audio>
+      </figcaption>
+    </figure>
+  </div>
+
+  <h2>Tracks 6–15 · audio + stills</h2>
+  <p class="note">11–15 just landed from Venice. 6–10 were already on disk. 2, 10, and 19 stay empty on purpose.</p>
+  <div class="scenes">
+    <figure class="card"><img src="scenes/dressed/06-lair.jpg" alt="6" /><figcaption><div class="who">6. The Secret Lair Terminal · 2:34</div><div class="meta">Hero + Claudius</div><audio controls src="audio/06-the-secret-lair-terminal.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/07-ledge.jpg" alt="7" /><figcaption><div class="who">7. Rubber Duck on the Ledge · 1:48</div><div class="meta">Hero + Claudius</div><audio controls src="audio/07-rubber-duck-on-the-ledge.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/08-rain-fire-escape.jpg" alt="8" /><figcaption><div class="who">8. Rainy Fire Escape Deploy · 2:52</div><div class="meta">Hero + Claudia</div><audio controls src="audio/08-rainy-fire-escape-deploy.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/09-keyboard.jpg" alt="9" /><figcaption><div class="who">9. Keyboard Cathedral · 2:20</div><div class="meta">Hero + Claudia</div><audio controls src="audio/09-keyboard-cathedral.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/10-merge.jpg" alt="10" /><figcaption><div class="who">10. Merge Conflict Moonlight · 2:44</div><div class="meta">No cast</div><audio controls src="audio/10-merge-conflict-moonlight.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/11-waiting.jpg" alt="11" /><figcaption><div class="who">11. Waiting on CI · 1:38</div><div class="meta">Hero + Claudius · 68 BPM Bb</div><audio controls src="audio/11-waiting-on-ci.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/12-alley.jpg" alt="12" /><figcaption><div class="who">12. Stack Trace Serenade · 2:38</div><div class="meta">Hero + Claudia · 77 BPM Em</div><audio controls src="audio/12-stack-trace-serenade.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/13-street.jpg" alt="13" /><figcaption><div class="who">13. Hotfix Under Streetlights · 1:58</div><div class="meta">Neo + Hero · 79 BPM Gm</div><audio controls src="audio/13-hotfix-under-streetlights.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/14-on-call.jpg" alt="14" /><figcaption><div class="who">14. On-Call Ambient · 2:58</div><div class="meta">Neo solo · 71 BPM C#m</div><audio controls src="audio/14-on-call-ambient.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/15-fog.jpg" alt="15" /><figcaption><div class="who">15. Cache Warming · 2:24</div><div class="meta">Hero + Claudia · 74 BPM F</div><audio controls src="audio/15-cache-warming.mp3"></audio></figcaption></figure>
+  </div>
+
+  <h2>Tracks 16–20 · audio + stills</h2>
+  <p class="note">Album audio is complete. 2, 10, and 19 stay empty on purpose.</p>
+  <div class="scenes">
+    <figure class="card"><img src="scenes/dressed/16-side-quest.jpg" alt="16" /><figcaption><div class="who">16. Side Quest After Hours · 1:56</div><div class="meta">Neo + Claudius · 82 BPM A</div><audio controls src="audio/16-side-quest-after-hours.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/17-docs-rain.jpg" alt="17" /><figcaption><div class="who">17. Documentation Rain · 2:50</div><div class="meta">Claudia + Hero · 72 BPM Bbm</div><audio controls src="audio/17-documentation-rain.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/18-last-todo.jpg" alt="18" /><figcaption><div class="who">18. The Last TODO · 1:44</div><div class="meta">Hero + Claudius · 70 BPM D</div><audio controls src="audio/18-the-last-todo.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/19-green-glow.jpg" alt="19" /><figcaption><div class="who">19. Green Build Glow · 2:32</div><div class="meta">No cast · 78 BPM C</div><audio controls src="audio/19-green-build-glow.mp3"></audio></figcaption></figure>
+    <figure class="card"><img src="scenes/dressed/20-dawn.jpg" alt="20" /><figcaption><div class="who">20. Dawn Over the Skyline · 2:54</div><div class="meta">Hero · 76 BPM F</div><audio controls src="audio/20-dawn-over-the-skyline.mp3"></audio></figcaption></figure>
+  </div>
+</body>
+</html>

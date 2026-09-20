@@ -1,0 +1,54 @@
+{
+  "tracks": {
+    "11": {
+      "id": "11",
+      "title": "Waiting on CI",
+      "slug": "waiting-on-ci",
+      "queue_id": "01a0bbda-1cc9-71f3-a299-c7a9c191bf15",
+      "duration_seconds": 98,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/11-waiting-on-ci.mp3",
+      "bytes": 1569063
+    },
+    "12": {
+      "id": "12",
+      "title": "Stack Trace Serenade",
+      "slug": "stack-trace-serenade",
+      "queue_id": "01a0bbda-1f3f-7a11-89f8-ebd3d0c28ad6",
+      "duration_seconds": 158,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/12-stack-trace-serenade.mp3",
+      "bytes": 2529116
+    },
+    "13": {
+      "id": "13",
+      "title": "Hotfix Under Streetlights",
+      "slug": "hotfix-under-streetlights",
+      "queue_id": "01a0bbda-209b-70f0-a813-08944ac55242",
+      "duration_seconds": 118,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/13-hotfix-under-streetlights.mp3",
+      "bytes": 1888802
+    },
+    "14": {
+      "id": "14",
+      "title": "On-Call Ambient",
+      "slug": "on-call-ambient",
+      "queue_id": "01a0bbda-2213-7882-8e9d-e8734a5035c5",
+      "duration_seconds": 178,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/14-on-call-ambient.mp3",
+      "bytes": 2849272
+    },
+    "15": {
+      "id": "15",
+      "title": "Cache Warming",
+      "slug": "cache-warming",
+      "queue_id": "01a0bbda-23c3-7390-9be8-553fd950d7eb",
+      "duration_seconds": 144,
+      "status": "saved",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/15-cache-warming.mp3",
+      "bytes": 2304671
+    }
+  }
+}
