@@ -74,11 +74,11 @@ open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
 | 1 | Cape On, IDE Open | yes | yes | yes | [0t7yv7dCNvQ](https://www.youtube.com/watch?v=0t7yv7dCNvQ) |
 | 2 | Coffee Before the Commit | yes | yes | yes | [Y6q9N-kHysE](https://www.youtube.com/watch?v=Y6q9N-kHysE) |
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
-| 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | 16:9 is in Automate It review — do not publish it as a standalone. Short file is on disk, not submitted yet. |
+| 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | in review (Short swapped in; 16:9 stays on disk) |
 | 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, not published yet) |
 | 6–20 | first-pass loops | yes | yes | yes | no — review 16:9 on the preview page, 9:16 in QuickTime |
 
-Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4 broke the rule (16:9 only, and that file is in Automate It review).
+Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4’s review item was the 16:9 plate; that attachment is now the 9:16 Short. The 16:9 master stays on disk for the compilation.
 
 ---
 
