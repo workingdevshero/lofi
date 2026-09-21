@@ -69,7 +69,7 @@ If the approved loop is 16:9, crop it to 9:16 **only when both characters still 
 | 2 | Coffee Before the Commit | yes | yes | yes | [Y6q9N-kHysE](https://www.youtube.com/watch?v=Y6q9N-kHysE) |
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
 | 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | 16:9 is in Automate It review — do not publish it as a standalone. Short file is on disk, not submitted yet. |
-| 5 | Midnight Rooftop Flow | yes | old rooftop loop | old rooftop loop | no |
+| 5 | Midnight Rooftop Flow | yes | yes (new typing loop) | yes (native 9:16, 1080×1920) | no |
 | 6–20 | (see index.html) | yes | no | no | no |
 
 Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4 broke the rule (16:9 only, and that file is in Automate It review).
