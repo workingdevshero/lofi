@@ -49,7 +49,7 @@ Always `-map 0:v:0 -map 1:a:0`. Imagine loops often carry their own AAC; without
 
 If the approved loop is 16:9, crop it to 9:16 **only when both characters still fit**. Crop x is per-scene (track 1 used `x=520`). If they don't fit, generate a **native 9:16** still + loop instead of a skinny crop.
 
-**9:16 cast:** keep both people if they fit cleanly. If the tall frame can only hold one, **Dimitris** — not Hero.
+**Laptop lid:** if a character who already has the `</>` chest emblem is holding the laptop, the lid is a **plain gold circle**. The `</>` on the lid is fine when the laptop is sitting on its own (no one holding it).
 
 **Preview page (`index.html`) is 16:9 only.** Do not embed 9:16 loops there. When a Short is ready to review, open it in QuickTime:
 
@@ -76,7 +76,7 @@ open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
 | 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | 16:9 is in Automate It review — do not publish it as a standalone. Short file is on disk, not submitted yet. |
 | 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, not published yet) |
-| 6–20 | (see index.html) | yes | no | no | no |
+| 6–20 | first-pass loops | yes | yes | yes | no — review 16:9 on the preview page, 9:16 in QuickTime |
 
 Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4 broke the rule (16:9 only, and that file is in Automate It review).
 
