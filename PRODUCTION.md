@@ -51,6 +51,12 @@ If the approved loop is 16:9, crop it to 9:16 **only when both characters still 
 
 **9:16 cast:** keep both people if they fit cleanly. If the tall frame can only hold one, **Dimitris** — not Hero.
 
+**Preview page (`index.html`) is 16:9 only.** Do not embed 9:16 loops there. When a Short is ready to review, open it in QuickTime:
+
+```bash
+open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
+```
+
 ### Automate It
 
 - Workspace: **Working Dev's Hero LLC** (`working-devs-hero`).
@@ -69,7 +75,7 @@ If the approved loop is 16:9, crop it to 9:16 **only when both characters still 
 | 2 | Coffee Before the Commit | yes | yes | yes | [Y6q9N-kHysE](https://www.youtube.com/watch?v=Y6q9N-kHysE) |
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
 | 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | 16:9 is in Automate It review — do not publish it as a standalone. Short file is on disk, not submitted yet. |
-| 5 | Midnight Rooftop Flow | yes | yes (new typing loop) | yes (native 9:16, 1080×1920) | no |
+| 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, not published yet) |
 | 6–20 | (see index.html) | yes | no | no | no |
 
 Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4 broke the rule (16:9 only, and that file is in Automate It review).
