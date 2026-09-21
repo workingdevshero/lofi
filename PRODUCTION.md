@@ -75,8 +75,10 @@ open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
 | 2 | Coffee Before the Commit | yes | yes | yes | [Y6q9N-kHysE](https://www.youtube.com/watch?v=Y6q9N-kHysE) |
 | 3 | Golden Hour Refactor | yes | yes | yes | [Gk7r2Md_QmE](https://www.youtube.com/watch?v=Gk7r2Md_QmE) |
 | 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | in review (Short swapped in; 16:9 stays on disk) |
-| 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, not published yet) |
-| 6–20 | first-pass loops | yes | yes | yes | no — review 16:9 on the preview page, 9:16 in QuickTime |
+| 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, manual) |
+| 6 | The Secret Lair Terminal | yes | yes | yes (1080×1920) | in review (Short, manual) |
+| 7 | Rubber Duck on the Ledge | yes | yes (boomerang) | yes (1080×1920) | in review (Short, manual) |
+| 8–20 | first-pass loops | yes | yes | yes | no — review 16:9 on the preview page, 9:16 in QuickTime |
 
 Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4’s review item was the 16:9 plate; that attachment is now the 9:16 Short. The 16:9 master stays on disk for the compilation.
 
