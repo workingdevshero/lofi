@@ -22,12 +22,12 @@
     },
     "08": {
       "id": "08",
-      "title": "Rainy Fire Escape Deploy",
-      "slug": "rainy-fire-escape-deploy",
+      "title": "Rainy Bus Stop Deploy",
+      "slug": "rainy-bus-stop-deploy",
       "queue_id": "01a0aa67-9cbf-7862-8f62-1c9b12812984",
       "duration_seconds": 172,
       "status": "saved",
-      "file": "/Users/bobby/Desktop/heroic-lofi/audio/08-rainy-fire-escape-deploy.mp3",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/08-rainy-bus-stop-deploy.mp3",
       "bytes": 2752724
     },
     "09": {

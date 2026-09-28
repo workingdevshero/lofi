@@ -42,14 +42,14 @@ TRACKS = [
     },
     {
         "id": "08",
-        "slug": "rainy-fire-escape-deploy",
-        "title": "Rainy Fire Escape Deploy",
+        "slug": "rainy-bus-stop-deploy",
+        "title": "Rainy Bus Stop Deploy",
         "duration_seconds": 172,
         "prompt": (
-            "Instrumental lo-fi hip hop, 73 BPM, C minor, about 2 minutes 52 seconds. "
-            "Soft rain-on-tin throughout, melancholy piano, muted trumpet after one minute, "
-            "muted bass, dusty drums. Start with rain and a single piano figure, drums at 0:24. "
-            "No vocals, no lyrics, vinyl crackle, loop-friendly ending."
+            "Instrumental lo-fi hip hop, 86 BPM, E-flat major, about 2 minutes 52 seconds. "
+            "A warm drum groove and round bass from the first bar, soft electric keys, "
+            "a gentle guitar line after one minute. Rain on a glass shelter, two friends on one bench, "
+            "cozy rather than sad. No vocals, no lyrics, light vinyl, loop-friendly ending with no crash."
         ),
     },
     {

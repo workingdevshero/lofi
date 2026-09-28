@@ -47,11 +47,11 @@ ffmpeg -y -stream_loop -1 -i loop-9x16.mp4 -i track.mp3 \
 
 Always `-map 0:v:0 -map 1:a:0`. Imagine loops often carry their own AAC; without the map, ffmpeg will mux the loop's silent/junk audio instead of the track.
 
-If the approved loop is 16:9, crop it to 9:16 **only when both characters still fit**. Crop x is per-scene (track 1 used `x=520`). If they don't fit, generate a **native 9:16** still + loop instead of a skinny crop.
+Nail the animation in **16:9**, then crop that loop to 9:16. Do not generate a separate portrait animation. Pick the crop x so both characters still fit (track 7 boomerang uses `crop=405:720:410:0` on the 1280×720 loop, then `scale=1080:1920`). The 9:16 Short is that crop, looped under the same MP3.
 
 **Laptop lid:** if a character who already has the `</>` chest emblem is holding the laptop, the lid is a **plain gold circle**. The `</>` on the lid is fine when the laptop is sitting on its own (no one holding it).
 
-**Preview page (`index.html`) is 16:9 only.** Do not embed 9:16 loops there. When a Short is ready to review, open it in QuickTime:
+**Preview page (`index.html`) has a 16:9 / 9:16 switch.** It swaps each card’s loop. Tracks 1–3 have no separate 9:16 loop, so that mode plays the muxed Short. QuickTime still works:
 
 ```bash
 open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
@@ -77,7 +77,7 @@ open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
 | 4 | City Lights Boot Sequence | yes | yes (new interior) | yes (native 9:16, 1080×1920) | in review (Short swapped in; 16:9 stays on disk) |
 | 5 | Midnight Rooftop Flow | yes | yes (hands-on-laptop take) | yes (native 9:16, 1080×1920) | in review (Short, manual) |
 | 6 | The Secret Lair Terminal | yes | yes | yes (1080×1920) | in review (Short, manual) |
-| 7 | Rubber Duck on the Ledge | yes | yes (boomerang) | yes (1080×1920) | in review (Short, manual) |
+| 7 | Rubber Duck on the Ledge | yes | yes (boomerang) | yes (crop of that boomerang, 1080×1920) | in review (Short, manual) |
 | 8–20 | first-pass loops | yes | yes | yes | no — review 16:9 on the preview page, 9:16 in QuickTime |
 
 Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube Shorts. Track 4’s review item was the 16:9 plate; that attachment is now the 9:16 Short. The 16:9 master stays on disk for the compilation.
@@ -89,7 +89,7 @@ Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube
 - Empty plates first, then dress. `scenes/empty/` is frozen except when Bobby explicitly throws a scene away (track 4 rooftop → interior).
 - Character boards on a flat plum ground. Dimitris: younger sidekick, no mask, brown eyes, green suit, green boots, **normal head**. Use the **cast image** as the insert reference — style-hinting lets the model redraw him with a giant head.
 - Laptop is a small prop.
-- Loops: locked camera, no zoom, 3–6s trim, no palindrome, no overlays. Typing + looking at the screen.
+- Loops: locked camera, no zoom, 3–6s trim, no palindrome, no overlays. Typing + looking at the screen. A “no zoom” line in the prompt is not enough. Pinning the same still as the first frame, the last frame, and interior keyframes locks the framing and also freezes the characters, so do not ship that clip unless the characters actually move. Measure the sky and corners against the first frame before calling the camera locked.
 - Venice `elevenlabs-music`, `force_instrumental: true`. Never name artists (422). 128 kbps, no bitrate knob.
 - Visual bible: Working Dev's Hero 2D vector, plum/gold — **not Ghibli**.
 
