@@ -19,6 +19,7 @@
     .scenes { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
     .card { background:var(--plum-2); border-radius:14px; overflow:visible; border:1px solid #5a3a78; }
+    .scenes .card { width:100%; margin:0; }
     .card img, .card video { border-radius:14px 14px 0 0; }
     .card img { width:100%; display:block; background:#1a0f26; }
     .scenes .card img { aspect-ratio:16/9; object-fit:cover; }
@@ -29,10 +30,13 @@
     .switch button { font:inherit; color:var(--cream); background:transparent; border:1px solid #5a3a78; border-radius:999px; padding:.35rem .9rem; cursor:pointer; }
     .switch button[aria-pressed="true"] { background:var(--gold); color:var(--plum); border-color:var(--gold); font-weight:700; }
     figcaption { padding:.7rem .85rem .9rem; font-size:.85rem; position:relative; }
-    .info { position:absolute; top:.55rem; right:.55rem; width:1.35rem; height:1.35rem; border-radius:999px; border:1px solid #5a3a78; background:var(--plum); color:var(--gold); font:700 .75rem/1.35rem ui-sans-serif, system-ui, sans-serif; cursor:help; padding:0; }
+    .cap-head { display:flex; align-items:flex-start; gap:.45rem; }
+    .tips { position:static; flex:none; display:flex; gap:.28rem; }
+    .tip { width:1.45rem; height:1.45rem; border-radius:999px; border:1px solid #5a3a78; background:var(--plum); color:var(--gold); cursor:help; padding:0; display:grid; place-items:center; }
+    .tip svg { width:.82rem; height:.82rem; display:block; }
     .prompt { display:none; position:absolute; left:0; top:calc(100% + .35rem); width:min(32rem, 80vw); padding:.75rem .85rem; background:#1a0f26; color:var(--cream); border:1px solid var(--gold); border-radius:10px; font-size:.78rem; line-height:1.45; z-index:20; white-space:pre-wrap; box-shadow:0 12px 32px rgba(0,0,0,.45); }
-    .info:hover + .prompt, .info:focus + .prompt { display:block; }
-    .who { font-weight:700; }
+    .prompt.show { display:block; }
+    .who { font-weight:700; flex:1; min-width:0; }
     .meta { color:var(--muted); font-size:.78rem; margin-top:.2rem; }
     audio { width:100%; margin-top:.5rem; }
     a { color:var(--gold); }
@@ -155,32 +159,80 @@
       "Flat modern 2D vector illustration of an empty city rooftop at night. A gold laptop on the parapet glows a soft green-gold, reflecting on the ledge. Full cream moon, deep plum sky, dark buildings. Calm success atmosphere, not a party. Clean geometric shapes. No people, no animals, no characters, no readable text.",
       "Keep this exact flat 2D vector style, simple building silhouettes, cream moon, and empty dark parapet on the right. Change only the sky to dawn: deep plum at the top fading into amber and rose along the horizon. City windows a little dimmer. Place a small closed gold laptop on the right parapet, backpack-sized, plain lid no logo. No people, no text. Same simple shapes as this midnight scene."
     ];
+    const musicPrompts = [
+      "This version\nInstrumental lo-fi hip hop, 68 BPM, F minor, about 2 minutes 56 seconds. Sparse electric piano, a soft music-box figure, quiet brushed drums, and a round bass that stays low. Wide open midnight air, two people sitting under a large moon. No vocals, no lyrics, light tape hiss, loop-friendly ending with no crash.\n\nFirst version\nInstrumental lo-fi hip hop, 75 BPM, A minor, about 2 minutes 56 seconds. Classic early-2000s Rhodes study beat, dusty drums, warm bass, vinyl crackle, tape saturation. Midnight rooftop flow, album centerpiece, no vocals, no lyrics, loop-friendly ending with no crash.",
+      "Instrumental lo-fi hip hop, 72 BPM, D minor, about 2 minutes 28 seconds. Warm Rhodes, unhurried brushed drums, round bass, a ceramic mug clink used as a quiet percussion texture. Cozy night, patient, no vocals, vinyl hiss, early-2000s chillhop, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 76 BPM, G major, about 2 minutes 48 seconds. Nylon guitar then dusty Rhodes, hopeful but still laid back, soft drums, no drop. Golden hour warmth, no vocals, tape saturation, 2000s study beat, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 78 BPM, C major, about 2 minutes 16 seconds. A pad that feels like a machine quietly booting, then Rhodes and muted trumpet after one minute. Night city windows lighting up, no vocals, dusty drums, vinyl, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 74 BPM, F major, about 1 minute 52 seconds. Dusty vintage Rhodes electric piano, mellow upright bass, soft boom-bap drums, tape saturation and light vinyl crackle. Start with just Rhodes and vinyl for eight bars, then bass, then drums. Warm dusk rooftop mood, early-2000s dusty study beat, no vocals, no lyrics, no fade-out crash, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 75 BPM, E minor, about 2 minutes 34 seconds. Deep sub bass, tactile mechanical keyboard clicks woven into a boom-bap pocket, dark Rhodes electric piano, faint server-fan bed. Intimate subterranean workshop mood. Start with clicks and vinyl, bass at 0:16, drums at 0:32. No vocals, no lyrics, tape saturation, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 70 BPM, F minor, about 1 minute 48 seconds. Sparse warm Rhodes, bowed bass, drums whispered in late after 0:40. Quiet late-night conversation in the chords, vinyl dust, almost nothing extra. No vocals, no lyrics, no melody pile-up, loop-friendly ending.",
+      "This version\nInstrumental lo-fi hip hop, 86 BPM, E-flat major, about 2 minutes 52 seconds. A warm drum groove and round bass from the first bar, soft electric keys, a gentle guitar line after one minute. Rain on a glass shelter, two friends on one bench, cozy rather than sad. No vocals, no lyrics, light vinyl, loop-friendly ending with no crash.\n\nFirst version\nInstrumental lo-fi hip hop, 73 BPM, C minor, about 2 minutes 52 seconds. Soft rain-on-tin throughout, melancholy piano, muted trumpet after one minute, muted bass, dusty drums. Start with rain and a single piano figure, drums at 0:24. No vocals, no lyrics, vinyl crackle, loop-friendly ending.",
+      "This version\nInstrumental lo-fi hip hop, 74 BPM, E minor, about 2 minutes 20 seconds. Soft electric piano, a brushed drum kit with no claps and no snare cracks, round bass, a little tape. Quiet late-night coding under a moonlit window. No vocals, no lyrics, smooth from the first note through the last, no noise after the music ends, loop-friendly ending with no crash.\n\nFirst version\nInstrumental lo-fi hip hop, 80 BPM, A minor, about 2 minutes 20 seconds. Close dry Rhodes, tight boom-bap, soft mechanical-keyboard bed on the offbeats, bone-dry mix except a little tape. Focused late-night coding music. No vocals, no lyrics, no big fills, loop-friendly ending.",
+      "This version\nInstrumental lo-fi hip hop, 70 BPM, C major, about 2 minutes 44 seconds. Soft and even from the first note, no sudden loud entrance and no drop. Warm electric piano, a quiet drum loop, round bass, a little vinyl. A calm moonlit rooftop and one laptop glowing. No vocals, no lyrics, no crash, loop-friendly ending.\n\nFirst version\nInstrumental lo-fi hip hop, 76 BPM, D minor, about 2 minutes 44 seconds. Two interlocking Rhodes figures that eventually agree, walking bass, dusty drums. Slight tension then settle. No vocals, no lyrics, vinyl, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 68 BPM, B-flat major, about 1 minute 38 seconds. Very sparse dusty Rhodes, slow round bass, drums barely there until 0:32. Patient late-night wait, vinyl dust, almost nothing extra. No vocals, no lyrics, no melody pile-up, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 77 BPM, E minor, about 2 minutes 38 seconds. Melancholy Rhodes figure that repeats and slowly unknots, walking bass, dusty drums. Soft problem-solving mood, tape saturation, vinyl crackle. Start with Rhodes alone, bass at 0:16, drums at 0:32. No vocals, no lyrics, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 79 BPM, G minor, about 1 minute 58 seconds. Tighter boom-bap pocket, muted bass, dry Rhodes, a little extra urgency in the drums without getting loud. Streetlight night, focused, tape saturation. No vocals, no lyrics, no big fills, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 71 BPM, C-sharp minor, about 2 minutes 58 seconds. Long ambient pad bed, distant Rhodes, bowed bass, drums whispered in after 0:48. Quiet overnight watch, vinyl hiss, tape warmth, almost still. No vocals, no lyrics, no crash, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 74 BPM, F major, about 2 minutes 24 seconds. Warm dusty Rhodes, mellow upright bass, soft boom-bap drums, light vinyl crackle. Cozy glow returning, hopeful but still laid back. Start with Rhodes and vinyl, bass then drums. No vocals, no lyrics, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 82 BPM, A major, about 1 minute 56 seconds. Slightly brighter dusty Rhodes, bouncing bass, light boom-bap, vinyl crackle. After-hours side quest mood, still laid back, a little extra bounce. No vocals, no lyrics, no big fills, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 72 BPM, B-flat minor, about 2 minutes 50 seconds. Soft rain throughout, melancholy Rhodes, muted bass, dusty drums. Start with rain and a single piano figure, drums at 0:24. Quiet documentation night, tape saturation, vinyl, no vocals, no lyrics, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 70 BPM, D major, about 1 minute 44 seconds. Warm short Rhodes lullaby, round bass, drums whispered in late. Winding down, one last checkbox, vinyl dust. No vocals, no lyrics, no melody pile-up, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 78 BPM, C major, about 2 minutes 32 seconds. Hopeful dusty Rhodes, mellow upright bass, soft boom-bap, light vinyl. Quiet green success glow, still laid back, tape saturation. Start with Rhodes, then bass, then drums. No vocals, no lyrics, loop-friendly ending.",
+      "Instrumental lo-fi hip hop, 76 BPM, F major, about 2 minutes 54 seconds. Album closer: warm Rhodes, sunrise pads, mellow bass, dusty drums, vinyl crackle. Dawn over the city, hopeful and tired, tape saturation. Start sparse, drums at 0:32, no vocals, no lyrics, loop-friendly ending with no crash."
+    ];
+    const photoIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><path d="M4 16.5l4.5-3.5 3.2 2.4 2.6-2 5.2 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+    const noteIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5V7.2l9-2v8.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.2" cy="17.5" r="2.1" fill="currentColor"/><circle cx="16.2" cy="13.6" r="2.1" fill="currentColor"/></svg>';
     document.querySelectorAll(".scenes > .card").forEach((card, i) => {
-      const prompt = scenePrompts[i];
-      if (!prompt) return;
       const cap = card.querySelector("figcaption");
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "info";
-      btn.textContent = "i";
-      btn.setAttribute("aria-label", "Scene prompt");
-      const tip = document.createElement("span");
-      tip.className = "prompt";
-      tip.setAttribute("role", "tooltip");
-      tip.textContent = prompt;
-      cap.append(btn, tip);
-      const place = () => {
-        tip.style.left = "0px";
-        tip.style.right = "auto";
-        const box = tip.getBoundingClientRect();
-        const pad = 12;
-        if (box.right > window.innerWidth - pad) {
-          tip.style.left = `${window.innerWidth - pad - box.width - cap.getBoundingClientRect().left}px`;
-        }
-        if (tip.getBoundingClientRect().left < pad) tip.style.left = `${pad - cap.getBoundingClientRect().left}px`;
+      const tips = document.createElement("div");
+      tips.className = "tips";
+      const add = (label, icon, text) => {
+        if (!text) return;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "tip";
+        btn.innerHTML = icon;
+        btn.setAttribute("aria-label", label);
+        const tip = document.createElement("span");
+        tip.className = "prompt";
+        tip.setAttribute("role", "tooltip");
+        tip.textContent = text;
+        const place = () => {
+          tip.style.left = "0px";
+          tip.style.right = "auto";
+          const box = tip.getBoundingClientRect();
+          const pad = 12;
+          if (box.right > window.innerWidth - pad) {
+            tip.style.left = `${window.innerWidth - pad - box.width - cap.getBoundingClientRect().left}px`;
+          }
+          if (tip.getBoundingClientRect().left < pad) tip.style.left = `${pad - cap.getBoundingClientRect().left}px`;
+        };
+        const show = () => {
+          cap.querySelectorAll(".prompt.show").forEach((el) => { if (el !== tip) el.classList.remove("show"); });
+          tip.classList.add("show");
+          requestAnimationFrame(place);
+        };
+        const hide = (e) => {
+          const next = e.relatedTarget;
+          if (next === btn || next === tip || (next && tip.contains(next))) return;
+          tip.classList.remove("show");
+        };
+        btn.addEventListener("mouseenter", show);
+        btn.addEventListener("focus", show);
+        btn.addEventListener("mouseleave", hide);
+        btn.addEventListener("blur", () => tip.classList.remove("show"));
+        tip.addEventListener("mouseleave", hide);
+        tips.append(btn);
+        cap.append(tip);
       };
-      btn.addEventListener("mouseenter", () => requestAnimationFrame(place));
-      btn.addEventListener("focus", () => requestAnimationFrame(place));
+      add("Picture prompt", photoIcon, scenePrompts[i]);
+      add("Music prompt", noteIcon, musicPrompts[i]);
+      const head = document.createElement("div");
+      head.className = "cap-head";
+      const who = cap.querySelector(".who");
+      who.before(head);
+      head.append(who, tips);
     });
   </script>
 </body>
