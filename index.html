@@ -8,7 +8,8 @@
     :root { --plum:#2d1941; --plum-2:#3d2456; --gold:#e6c35c; --cream:#f5f0e8; --muted:#cbb8d9; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:var(--plum); color:var(--cream); line-height:1.45; }
-    header { padding:2.5rem 1.5rem 1.25rem; max-width:1100px; margin:0 auto; }
+    header { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem 1.25rem; padding:2.5rem 1.5rem 1.25rem; max-width:1100px; margin:0 auto; }
+    header > div { flex:1; min-width:0; }
     h1 { font-size:1.8rem; margin:0 0 .4rem; }
     .sub { color:var(--muted); max-width:48rem; }
     h2 { max-width:1100px; margin:2rem auto .75rem; padding:0 1.5rem; font-size:1.15rem; color:var(--gold); letter-spacing:.04em; text-transform:uppercase; }
@@ -26,8 +27,10 @@
     .scenes .card video { width:100%; display:block; aspect-ratio:16/9; object-fit:contain; background:#1a0f26; }
     body[data-aspect="9"] .scenes { grid-template-columns: repeat(auto-fit, minmax(200px, 280px)); justify-content: center; }
     body[data-aspect="9"] .scenes .card video { aspect-ratio:9/16; max-height:72vh; }
-    .out { display:flex; flex-wrap:wrap; gap:.35rem 1.15rem; margin:.85rem 0 0; font-weight:700; }
-    .out a { color:var(--gold); text-underline-offset:.18em; }
+    .out { flex:none; display:flex; gap:.45rem; margin:0; }
+    .out a { width:2.55rem; height:2.55rem; border-radius:999px; border:2px solid var(--gold); color:var(--gold); display:grid; place-items:center; text-decoration:none; }
+    .out a:hover, .out a:focus-visible { background:var(--gold); color:var(--plum); }
+    .out svg { width:1.2rem; height:1.2rem; display:block; fill:currentColor; }
     .switch { display:inline-flex; gap:.35rem; margin-top:.85rem; }
     .switch button { font:inherit; color:var(--cream); background:transparent; border:1px solid #5a3a78; border-radius:999px; padding:.35rem .9rem; cursor:pointer; }
     .switch button[aria-pressed="true"] { background:var(--gold); color:var(--plum); border-color:var(--gold); font-weight:700; }
@@ -46,16 +49,18 @@
 </head>
 <body>
   <header>
+    <div>
     <h1>Heroic Lofi for Vibe Coding</h1>
     <p class="sub">Twenty instrumental tracks for one night of coding.</p>
-    <p class="out">
-      <a href="https://youtu.be/_ZXBtcGy73w">Watch on YouTube</a>
-      <a href="https://github.com/workingdevshero/lofi">Source on GitHub</a>
-    </p>
     <span class="switch" role="group" aria-label="Preview shape">
       <button type="button" data-aspect="16" aria-pressed="true">16:9</button>
       <button type="button" data-aspect="9" aria-pressed="false">9:16</button>
     </span>
+    </div>
+    <nav class="out" aria-label="Album links">
+      <a href="https://youtu.be/_ZXBtcGy73w" aria-label="Watch on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z"/></svg></a>
+      <a href="https://github.com/workingdevshero/lofi" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.9 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.6C22 6.6 17.5 2 12 2z"/></svg></a>
+    </nav>
   </header>
 
   <h2>Cast</h2>
