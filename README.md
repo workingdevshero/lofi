@@ -1,4 +1,4 @@
-# Heroic LoFi for Vibe Coding
+# Heroic Lofi for Vibe Coding
 
 Working Dev's Hero album. Intended site: **https://lofi.workingdevshero.com**
 

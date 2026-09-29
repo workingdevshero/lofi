@@ -1,4 +1,4 @@
-# Heroic LoFi — production rules
+# Heroic Lofi — production rules
 
 Working Dev's Hero album. Canonical folder: `/Users/bobby/Desktop/heroic-lofi/`.
 
@@ -60,7 +60,7 @@ open -a "QuickTime Player" videos/loops/NN-slug-loop-9x16.mp4
 ### Automate It
 
 - Workspace: **Working Dev's Hero LLC** (`working-devs-hero`).
-- Task title: `YouTube Short: <Track Title> — Heroic LoFi`
+- Task title: `YouTube Short: <Track Title> — Heroic Lofi`
 - `contentType: youtube`, `publishMode: manual`, `requiresReview: true`
 - Attach the **9:16** mp4. Optional 9:16 thumbnail.
 - Leave 16:9 masters on disk for the compilation.
