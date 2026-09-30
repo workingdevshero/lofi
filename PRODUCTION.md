@@ -84,6 +84,14 @@ Tracks 1–3 were done correctly: both masters on disk, **9:16** sent to YouTube
 
 ---
 
+## Mastering (compilation audio)
+
+`python3 scripts/master_album.py` writes `audio/mastered/` (gitignored): -14 LUFS, ≤ -1 dBTP, dead head/tail trimmed, per-track EQ in the script. `--check` verifies; tests in `scripts/test_master_album.py`. Build the long-form compilation from these, not from `audio/`. Rerun after any track swap. Shorts keep the raw track (YouTube levels them).
+
+Take swaps: new takes land as `NN-slug-vN.mp3` (`scripts/queue_remakes.py`); once one is picked, copy it into the slot, remux both masters, update the prompt in `index.html`, replace the Short in Automate It, and delete the leftover takes. Good songs that don't fit go to `audio/next-album/` with a `.txt` prompt beside each.
+
+---
+
 ## Other rules that bit us
 
 - Empty plates first, then dress. `scenes/empty/` is frozen except when Bobby explicitly throws a scene away (track 4 rooftop → interior).

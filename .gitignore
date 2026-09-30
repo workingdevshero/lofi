@@ -13,3 +13,6 @@ videos/heroic-lofi-album-16x9.mp4
 scenes/archive/08-rainy-fire-escape-deploy-9x16-v1-audio.mp4
 **/*.jpg.lock
 **/*.json.lock
+# Rebuilt by scripts/master_album.py
+audio/mastered/
+__pycache__/
