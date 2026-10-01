@@ -47,6 +47,43 @@
       "file": "/Users/bobby/Desktop/heroic-lofi/audio/16-side-quest-after-hours-v3.mp3",
       "prompt": "Instrumental lo-fi hip hop, 80 BPM, B-flat major, about 1 minute 56 seconds. Dusty boom-bap drums and a warm round bass from the first bar, the same late-night pocket as a study beat. Over it, a soft 8-bit quest melody like an old handheld game heard through a cassette: a mellow, low-passed triangle-wave lead sitting behind the drums, heroic but gentle, rising and answering itself. A warm pad quietly doubles the melody. No piano, no Rhodes, no piercing square wave, no fast arpeggios, no bright attack. Light tape saturation and faint cassette hiss. Medium volume the whole way. No vocals, no lyrics, loop-friendly ending with no crash.",
       "status": "saved"
+    },
+    "07-rubber-duck-on-the-ledge-v2": {
+      "queue_id": "01a0f4c3-cd12-71b2-96bf-c7122652c6b4",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v2.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 72 BPM, D major, about 1 minute 48 seconds. A soft, breathy flute plays a simple, patient melody and a warm upright bass answers it, like a quiet conversation. Brushed boom-bap drums from the first bar, a muffled warm pad underneath. No piano, no Rhodes, no guitar, no bright attack, no long intro. Even volume the whole way. Light tape warmth, faint vinyl dust. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "saved"
+    },
+    "07-rubber-duck-on-the-ledge-v3": {
+      "queue_id": "01a0f4c3-ce63-78b1-b60b-5df14267fde8",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v3.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 72 BPM, D major, about 1 minute 48 seconds. A soft, breathy flute plays a simple, patient melody and a warm upright bass answers it, like a quiet conversation. Brushed boom-bap drums from the first bar, a muffled warm pad underneath. No piano, no Rhodes, no guitar, no bright attack, no long intro. Even volume the whole way. Light tape warmth, faint vinyl dust. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "saved"
+    },
+    "07-rubber-duck-on-the-ledge-v4": {
+      "queue_id": "01a0f4d7-9389-7260-9ce4-1413f0c4b6d9",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v4.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 76 BPM, D minor, about 1 minute 48 seconds. A warm, muffled electric piano plays slow chords and a simple melody in the low and middle register, soft and rounded with a gentle tremolo, like it's coming from the next room. Dusty boom-bap drums and a round upright bass from the first bar. A quiet late-night conversation on a rooftop ledge, calm and thoughtful. No acoustic piano, no high notes, no bright attack, no sharp notes, no guitar, no long intro. Even volume the whole way. Light vinyl crackle and tape warmth. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "saved"
+    },
+    "07-rubber-duck-on-the-ledge-v5": {
+      "queue_id": "01a0f4d7-94f8-7fd3-acc8-4bf673827f97",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v5.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 76 BPM, D minor, about 1 minute 48 seconds. A warm, muffled electric piano plays slow chords and a simple melody in the low and middle register, soft and rounded with a gentle tremolo, like it's coming from the next room. Dusty boom-bap drums and a round upright bass from the first bar. A quiet late-night conversation on a rooftop ledge, calm and thoughtful. No acoustic piano, no high notes, no bright attack, no sharp notes, no guitar, no long intro. Even volume the whole way. Light vinyl crackle and tape warmth. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "saved"
+    },
+    "07-rubber-duck-on-the-ledge-v6": {
+      "queue_id": "01a0f4d7-962c-7790-a59f-75a0e208ab2c",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v6.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 76 BPM, D minor, about 1 minute 48 seconds. A warm, muffled electric piano plays slow chords and a simple melody in the low and middle register, soft and rounded with a gentle tremolo, like it's coming from the next room. Dusty boom-bap drums and a round upright bass from the first bar. A quiet late-night conversation on a rooftop ledge, calm and thoughtful. No acoustic piano, no high notes, no bright attack, no sharp notes, no guitar, no long intro. Even volume the whole way. Light vinyl crackle and tape warmth. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "abandoned"
+    },
+    "07-rubber-duck-on-the-ledge-v7": {
+      "queue_id": "01a0f4e3-8910-7672-8309-58a46dcf9c4d",
+      "file": "/Users/bobby/Desktop/heroic-lofi/audio/07-rubber-duck-on-the-ledge-v7.mp3",
+      "prompt": "Instrumental lo-fi hip hop, 76 BPM, D minor, about 1 minute 48 seconds. A warm, muffled electric piano plays slow chords and a simple melody in the low and middle register, soft and rounded with a gentle tremolo, like it's coming from the next room. Dusty boom-bap drums and a round upright bass from the first bar. A quiet late-night conversation on a rooftop ledge, calm and thoughtful. No acoustic piano, no high notes, no bright attack, no sharp notes, no guitar, no long intro. Even volume the whole way. Light vinyl crackle and tape warmth. No vocals, no lyrics, loop-friendly ending with no crash.",
+      "status": "saved",
+      "note": "replacement for v6, which hung at Venice"
     }
   }
 }

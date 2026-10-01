@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Queue new takes of tracks 12, 16, 17 and 19 on Venice elevenlabs-music.
+"""Queue new takes of tracks 07, 12, 16, 17 and 19 on Venice elevenlabs-music.
 
 Takes save next to the originals as NN-slug-vN.mp3. Originals are never touched.
 Rerunning resumes queued takes; bump TAKES to queue more.
@@ -18,6 +18,21 @@ STATE = Path(__file__).parent / "audio_queue_state_remakes.json"
 TAKES = 2
 
 TRACKS = [
+    {
+        "id": "07",
+        "slug": "rubber-duck-on-the-ledge",
+        "duration_seconds": 108,
+        "takes": 3,
+        "prompt": (
+            "Instrumental lo-fi hip hop, 76 BPM, D minor, about 1 minute 48 seconds. "
+            "A warm, muffled electric piano plays slow chords and a simple melody in the low and middle "
+            "register, soft and rounded with a gentle tremolo, like it's coming from the next room. "
+            "Dusty boom-bap drums and a round upright bass from the first bar. A quiet late-night "
+            "conversation on a rooftop ledge, calm and thoughtful. No acoustic piano, no high notes, "
+            "no bright attack, no sharp notes, no guitar, no long intro. Even volume the whole way. "
+            "Light vinyl crackle and tape warmth. No vocals, no lyrics, loop-friendly ending with no crash."
+        ),
+    },
     {
         "id": "12",
         "slug": "stack-trace-serenade",
@@ -92,8 +107,9 @@ def main() -> int:
     claimed = {t["file"] for t in takes.values()}
 
     for t in TRACKS:
-        have = [k for k in takes if k.startswith(t["id"] + "-")]
-        for _ in range(TAKES - len(have)):
+        # A new prompt for a track gets its own takes.
+        have = [k for k, v in takes.items() if k.startswith(t["id"] + "-") and v["prompt"] == t["prompt"]]
+        for _ in range(t.get("takes", TAKES) - len(have)):
             out = next_take_path(t["id"], t["slug"], claimed)
             raw, _ = post(
                 "https://api.venice.ai/api/v1/audio/queue",
