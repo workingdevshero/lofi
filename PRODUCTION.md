@@ -95,7 +95,7 @@ Take swaps: new takes land as `NN-slug-vN.mp3` (`scripts/queue_remakes.py`); onc
 ## Other rules that bit us
 
 - Empty plates first, then dress. `scenes/empty/` is frozen except when Bobby explicitly throws a scene away (track 4 rooftop → interior).
-- Character boards on a flat plum ground. Dimitris: younger sidekick, no mask, brown eyes, green suit, green boots, **normal head**. Use the **cast image** as the insert reference — style-hinting lets the model redraw him with a giant head.
+- Character boards on a flat plum ground. Sidekick: younger, no mask, brown eyes, green suit, green boots, **normal head**. Use the **cast image** as the insert reference — style-hinting lets the model redraw him with a giant head.
 - Laptop is a small prop.
 - Loops: locked camera, no zoom, 3–6s trim, no palindrome, no overlays. Typing + looking at the screen. A “no zoom” line in the prompt is not enough. Pinning the same still as the first frame, the last frame, and interior keyframes locks the framing and also freezes the characters, so do not ship that clip unless the characters actually move. Measure the sky and corners against the first frame before calling the camera locked.
 - Venice `elevenlabs-music`, `force_instrumental: true`. Never name artists (422). 128 kbps, no bitrate knob.
