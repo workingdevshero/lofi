@@ -5,7 +5,7 @@ Each track plays over its 16:9 loop (the one index.html shows), in album order,
 with a crossfade between tracks on both picture and sound.
 
     scripts/master_album.py            # first, so audio/mastered/ is current
-    scripts/build_compilation.py       # -> videos/heroic-lofi-album-16x9-v2.mp4
+    scripts/build_compilation.py       # -> videos/heroic-lofi-album-16x9.mp4
     scripts/build_compilation.py -o videos/other-name.mp4
 """
 from __future__ import annotations
@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MASTERED = ROOT / "audio" / "mastered"
-DEFAULT_OUT = ROOT / "videos" / "heroic-lofi-album-16x9-v2.mp4"
+DEFAULT_OUT = ROOT / "videos" / "heroic-lofi-album-16x9.mp4"
 CROSSFADE = 1.0
 VIDEO_PAD = 1.0  # extra loop footage per segment so every crossfade has frames to blend
 
